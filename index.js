@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://desol-client-six.vercel.app/",
+      "https://desol-client-six.vercel.app",
     ],
     credentials: true,
   })
