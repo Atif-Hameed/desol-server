@@ -1,7 +1,7 @@
 import Cars from "../models/carModel.js";
 
 const carFormController = async (req, res) => {
-  const { formData, userId,pictures } = req.body;
+  const { formData, userId, pictures } = req.body;
   try {
 
     let carForm = await Cars.findOne({ userId });
@@ -11,6 +11,7 @@ const carFormController = async (req, res) => {
         userId: userId,
         carModel: formData.carModel,
         price: formData.price,
+        city: formData.city,
         phoneNumber: formData.phoneNumber,
         maxPictures: formData.maxPictures,
         pictures: pictures
@@ -23,6 +24,7 @@ const carFormController = async (req, res) => {
       carForm.carModel = formData.carModel;
       carForm.price = formData.price;
       carForm.phoneNumber = formData.phoneNumber;
+      carForm.city = formData.city;
       carForm.maxPictures = formData.maxPictures;
       carForm.pictures = pictures;
 

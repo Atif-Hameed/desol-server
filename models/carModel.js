@@ -6,6 +6,7 @@ const carFormSchema = new Schema({
   userId: { type: String, required: true },
   carModel: { type: String, required: true },
   price: { type: Number, required: true },
+  city: { type: Number, required: true },
   phoneNumber: { type: String, required: true },
   maxPictures: { type: Number, required: true },
   pictures: [{ type: String }] 
